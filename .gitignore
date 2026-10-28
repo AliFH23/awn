@@ -1,0 +1,17 @@
+# المكتبات (بتنزل من جديد بـ npm install)
+node_modules/
+
+# الأسرار — ممنوع ترتفع على GitHub أبدًا
+.env
+.env.*
+!.env.example
+
+# ملفات البناء والسجلات
+dist/
+build/
+coverage/
+*.log
+
+# ملفات النظام والمحرر
+.DS_Store
+.vscode/
