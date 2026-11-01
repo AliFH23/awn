@@ -1,4 +1,4 @@
-const required = ["PORT", "CLIENT_URL"];
+const required = ["PORT", "CLIENT_URL", "MONGO_URI"];
 
 for (const key of required) {
   if (!process.env[key]) {
@@ -12,4 +12,5 @@ export const env = Object.freeze({
   isProd: process.env.NODE_ENV === "production",
   port: Number(process.env.PORT),
   clientUrl: process.env.CLIENT_URL,
+  mongoUri: process.env.MONGO_URI,
 });
