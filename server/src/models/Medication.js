@@ -30,6 +30,16 @@ const medicationSchema = new mongoose.Schema(
         maxlength: 500,
 
     },
+    dosage: {
+        amount:{
+            type: Number,
+            min: 0,
+        },
+        unit:{
+            type : String,
+            enum:["mg", "ml", "g", "mcg", "IU", "puff", "drop", "other","tablet","capsule","unit"],
+        },
+    },
     stock:{
       type: Number,
       min: 0,  
@@ -37,6 +47,16 @@ const medicationSchema = new mongoose.Schema(
     isActive: {
         type: Boolean,
         default: true,
+    },
+    
+    startDate:{
+        type: Date,
+        required: true,
+        default: Date.now,
+    },  
+    
+    endDate:{
+        type: Date,
     },
   },
   { timestamps: true }
